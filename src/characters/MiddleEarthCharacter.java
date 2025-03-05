@@ -39,7 +39,36 @@ public abstract class MiddleEarthCharacter {
 	/**
 	 * display the info of the character
 	 */
-	void displayInfo() {
+	
+	public String getName() {
+		return this.name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getHealth() {
+		return this.health;
+	}
+	public void setHealth(double health) {
+		this.health = health;
+	}
+	public double getPower() {
+		return this.power;
+	}
+	public void setPower(double power) {
+		this.power = power;
+	}
+	
+	public boolean equals(MiddleEarthCharacter other) {
+		if(!(other instanceof MiddleEarthCharacter)) {
+			return false;
+		}
+		return true;
+	}
+	
+	
+	
+	public void displayInfo() {
 		System.out.println("name = " + name);
 		System.out.println("health = " + health);
 		System.out.println("power = " + power); 
