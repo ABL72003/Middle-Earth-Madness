@@ -112,7 +112,7 @@ public class CharacterManager {
 		 * uses a for and if loop to find the index of character passed.
 		 */
 	}
-	
-	
 
 }
+
+
