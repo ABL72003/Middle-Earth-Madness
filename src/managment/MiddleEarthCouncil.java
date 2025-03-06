@@ -3,7 +3,7 @@ package managment;
 public class MiddleEarthCouncil {
 	
 	private static MiddleEarthCouncil instance;
-	private CharacterManager characterManager;
+	private static CharacterManager characterManager;
 	
 	/**
 	 * Private constructor prevents instantiation from other classes 
@@ -15,7 +15,7 @@ public class MiddleEarthCouncil {
 	/**
 	 * Public method to provide access to the instance
 	 */
-	static MiddleEarthCouncil getInstance(){
+	public static MiddleEarthCouncil getInstance(){
 		if(instance == null) {
 			instance = new MiddleEarthCouncil();
 		}

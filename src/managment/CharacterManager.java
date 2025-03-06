@@ -8,7 +8,7 @@ public class CharacterManager {
 	
 	int size;
 	
-	boolean addCharacter(MiddleEarthCharacter c) {
+	public boolean addCharacter(MiddleEarthCharacter c) {
 		if(characters == null) {
 			characters = new MiddleEarthCharacter[1];
 			characters[0] = c;
@@ -33,7 +33,7 @@ public class CharacterManager {
 		
 	}
 	
-	MiddleEarthCharacter getCharacter(String name) {
+	public MiddleEarthCharacter getCharacter(String name) {
 		for(MiddleEarthCharacter character : characters) {
 			if(character.getName() == name) {
 				return character;
@@ -43,7 +43,7 @@ public class CharacterManager {
 		return null;
 	}
 	
-	boolean updateCharacter(MiddleEarthCharacter character, String name, int health, int power) {
+	public boolean updateCharacter(MiddleEarthCharacter character, String name, int health, int power) {
 		boolean change = false;
 		if(character.getName() != name) {
 			character.setName(name);
@@ -60,7 +60,7 @@ public class CharacterManager {
 		return change;
 	}
 	
-	boolean deleteCharacter(MiddleEarthCharacter character) {
+	public boolean deleteCharacter(MiddleEarthCharacter character) {
 		int index = -1;
 		for(MiddleEarthCharacter dummy : characters) {
 			if(dummy.equals(character)) {
@@ -76,7 +76,7 @@ public class CharacterManager {
 		return false;
 	}
 	
-	void displayAllCharacters() {
+	public void displayAllCharacters() {
 		for(int i = 0;i<size ; i++) {
 			characters[i].displayInfo();
 			}
@@ -91,5 +91,15 @@ public class CharacterManager {
 		}
 		return -1;
 	}
+	
+	// Add a getter method for size
+    public int getSize() {
+        return size;
+    }
+    
+    // Getter method for characters
+    public MiddleEarthCharacter[] getCharacters() {
+        return characters;
+    }
 
 }
