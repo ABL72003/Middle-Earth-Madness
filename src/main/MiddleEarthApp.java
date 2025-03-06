@@ -39,5 +39,21 @@ public class MiddleEarthApp {
 
         // user choosing option 6 (Exit)
         System.out.println("\n Exit");
+        
+     // user choosing option 1 (Add a new character)
+        System.out.println("\n Add a new character");
+        menu.addCharacter("Draco", 10.0, 5.0, 2); // Dwarf
+        
+     // user choosing option 1 (Add a new character)
+        System.out.println("\n Add a new character");
+        menu.addCharacter("Ron", 130.0, 715.0, 3); // Human
+        
+     // user choosing option 1 (Add a new character)
+        System.out.println("\n Add a new character");
+        menu.addCharacter("Harry", 500.0, 555.0, 5); // Wizard
+        
+     // user choosing option 2 (View all characters again)
+        System.out.println("\n View all characters after update");
+        menu.displayAllCharacters();
     }
 }

@@ -91,7 +91,9 @@ public class Menu {
             System.out.println("Failed to delete character.");
         }
     }
-
+    /**
+     * Every player executes an attack 
+     */
     public void executeAttacks() {
         MiddleEarthCharacter[] characters = characterManager.getCharacters();
 
@@ -114,7 +116,9 @@ public class Menu {
         }
     }
 
-
+    /**
+     * Displays all the characters
+     */
     public void displayAllCharacters() {
         characterManager.displayAllCharacters();
     }

@@ -8,6 +8,9 @@ public class CharacterManager {
 	
 	int size;
 	
+	/**
+	 * Dynamically resizes the array if it is full. Adds characters to list.
+	 */
 	public boolean addCharacter(MiddleEarthCharacter c) {
 		if(characters == null) {
 			characters = new MiddleEarthCharacter[1];
@@ -15,7 +18,7 @@ public class CharacterManager {
 			size++;
 			return true;
 		}
-		if(++size > characters.length) {
+		if(size == characters.length) {
 			MiddleEarthCharacter[] dummy = characters.clone();
 			characters = new MiddleEarthCharacter[characters.length*2];
 			int i = 0;
@@ -24,23 +27,14 @@ public class CharacterManager {
 				characters[i] = character;
 				i++;
 			}
-			characters[i] = c;
+		}
+			characters[size] = c;
+			size++;
 			return true;
-			}
-		
-		characters[size+1] = c;
-		return true;
-		/**
-		 * Dynamically resizes the array if it is full. Adds characters to list.
-		 */
+			
 	}
 	
-<<<<<<< HEAD
-	MiddleEarthCharacter getCharacter(String name) {
-=======
-	
-	MiddleEarthCharacter getCharacter(String name) {
->>>>>>> 96578f53d08b81204dc7524354bae80e7b0f02cb
+	public MiddleEarthCharacter getCharacter(String name) {
 		for(MiddleEarthCharacter character : characters) {
 			if(character.getName() == name) {
 				return character;
@@ -117,12 +111,15 @@ public class CharacterManager {
 		 */
 	}
 	
-<<<<<<< HEAD
-	
-
-=======
-	
->>>>>>> 96578f53d08b81204dc7524354bae80e7b0f02cb
+	// Add a getter method for size
+    public int getSize() {
+        return size;
+    }
+    
+    // Getter method for characters
+    public MiddleEarthCharacter[] getCharacters() {
+        return characters;
+    }
 }
 
 
