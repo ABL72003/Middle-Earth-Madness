@@ -2,6 +2,12 @@ package characters;
 
 public class Elf extends MiddleEarthCharacter {
 
+	/**
+	 * Creates Elf
+	 * @param name
+	 * @param health
+	 * @param power
+	 */
 	public Elf(String name, double health, double power) {
 		//using super constructor from slides in class
 		super(name, health, power);
@@ -28,6 +34,9 @@ public class Elf extends MiddleEarthCharacter {
 			}
 	}
 
+	/**
+	 * returns elf
+	 */
 	@Override
 	public String getRace() {
 		return "Elf";

@@ -2,6 +2,12 @@ package characters;
 
 public class Human extends MiddleEarthCharacter {
 
+	/**
+	 * Creates human
+	 * @param name
+	 * @param health
+	 * @param power
+	 */
 	public Human(String name, double health, double power) {
 		//using super constructor from slides in class
 		super(name, health, power);
@@ -27,7 +33,9 @@ public class Human extends MiddleEarthCharacter {
 				return true;
 			}
 	}
-
+	/**
+	 * returns race
+	 */
 	@Override
 	public String getRace() {
 		return "Human";

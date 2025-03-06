@@ -3,6 +3,7 @@ package main;
 public class MiddleEarthApp {
 
 	public static void main(String[] args) {
+        
 		 // Create the Menu object
         Menu menu = new Menu();
 
@@ -51,6 +52,50 @@ public class MiddleEarthApp {
      // user choosing option 1 (Add a new character)
         System.out.println("\n Add a new character");
         menu.addCharacter("Harry", 500.0, 555.0, 5); // Wizard
+        
+     // user choosing option 2 (View all characters again)
+        System.out.println("\n View all characters after update");
+        menu.displayAllCharacters();
+        
+     // user choosing option 5 (Execute all characters' attack actions)
+        System.out.println("\n Execute all characters' attack actions");
+        menu.executeAttacks();
+        
+      //user choosing option 3 (Update a character)
+        System.out.println("\n Update character");
+        menu.updateCharacter("Draco", "Draco malfoy", 120.0, 90.0);
+        
+      //user choosing option 3 (Update a character)
+        System.out.println("\n Update character");
+        menu.updateCharacter("Harry", "harry potter", 120.0, 90.0);
+        
+      //user choosing option 3 (Update a character)
+        System.out.println("\n Update character");
+        menu.updateCharacter("Ron", "Ron Weasley", 120.0, 90.0);
+        
+     // user choosing option 2 (View all characters again)
+        System.out.println("\n View all characters after update");
+        menu.displayAllCharacters();
+        
+     // user choosing option 1 (Add a new character)
+        System.out.println("\n Add a new character");
+        menu.addCharacter("Draco malfoy", 500.0, 555.0, 5); // Wizard
+        
+      //user choosing option 4 (Delete a character)
+        System.out.println("\n Delete character");
+        menu.deleteCharacter("Draco malfoy");
+        
+      //user choosing option 4 (Delete a character)
+        System.out.println("\n Delete character");
+        menu.deleteCharacter("Hermione Granger");
+        
+      //user choosing option 4 (Delete a character)
+        System.out.println("\n Delete character");
+        menu.deleteCharacter("Ron Weasley");
+        
+      //user choosing option 4 (Delete a character)
+        System.out.println("\n Delete character");
+        menu.deleteCharacter("harry potter");
         
      // user choosing option 2 (View all characters again)
         System.out.println("\n View all characters after update");

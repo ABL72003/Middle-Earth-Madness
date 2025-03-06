@@ -12,11 +12,17 @@ import characters.MiddleEarthCharacter;
 public class Menu {
 	private CharacterManager characterManager; // Declare the council as a private field
 
+	/**
+	 * Initializes the instance of characterManager
+	 */
     public Menu() {
         // Initialize the council using the singleton getInstance() method
         characterManager = MiddleEarthCouncil.getInstance().getCharacterManager();
     }
-
+    
+    /**
+     * Displays menu
+     */
     public void displayMenu() {
         System.out.println("Menu:");
         System.out.println("1. Add a new character");
@@ -27,6 +33,13 @@ public class Menu {
         System.out.println("6. Exit");
     }
 
+    /**
+     * Adds a character. 
+     * @param name
+     * @param health
+     * @param power
+     * @param raceChoice
+     */
     public void addCharacter(String name, double health, double power, int raceChoice) {
         MiddleEarthCharacter character = null;
 
@@ -57,7 +70,14 @@ public class Menu {
             System.out.println("Failed to add character.");
         }
     }
-
+    
+    /**
+     * Updates a given character. If character isn't found, doesn't update
+     * @param nameToFind
+     * @param newName
+     * @param newHealth
+     * @param newPower
+     */
     public void updateCharacter(String nameToFind, String newName, double newHealth, double newPower) {
         MiddleEarthCharacter characterToFind = characterManager.getCharacter(nameToFind);
 
@@ -75,6 +95,10 @@ public class Menu {
         }
     }
 
+    /**
+     * Deletes a character with a given name. If the name is not in the list, nothing deletes
+     * @param nameToDelete
+     */
     public void deleteCharacter(String nameToDelete) {
         MiddleEarthCharacter characterToDelete = characterManager.getCharacter(nameToDelete);
 
@@ -91,6 +115,7 @@ public class Menu {
             System.out.println("Failed to delete character.");
         }
     }
+    
     /**
      * Every player executes an attack 
      */

@@ -1,7 +1,13 @@
 package characters;
 
 public class Wizard extends MiddleEarthCharacter {
-
+	
+	/**
+	 * Creates a Wizard
+	 * @param name
+	 * @param health
+	 * @param power
+	 */
 	public Wizard(String name, double health, double power) {
 		//using super constructor from slides in class
 		super(name, health, power);
@@ -28,6 +34,9 @@ public class Wizard extends MiddleEarthCharacter {
 			}
 	}
 
+	/**
+	 * Returns race of character
+	 */
 	@Override
 	public String getRace() {
 		return "Wizard";
