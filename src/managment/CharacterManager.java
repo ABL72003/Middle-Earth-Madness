@@ -30,10 +30,17 @@ public class CharacterManager {
 		
 		characters[size+1] = c;
 		return true;
-		
+		/**
+		 * Dynamically resizes the array if it is full. Adds characters to list.
+		 */
 	}
 	
-	public MiddleEarthCharacter getCharacter(String name) {
+<<<<<<< HEAD
+	MiddleEarthCharacter getCharacter(String name) {
+=======
+	
+	MiddleEarthCharacter getCharacter(String name) {
+>>>>>>> 96578f53d08b81204dc7524354bae80e7b0f02cb
 		for(MiddleEarthCharacter character : characters) {
 			if(character.getName() == name) {
 				return character;
@@ -41,6 +48,9 @@ public class CharacterManager {
 			
 		}
 		return null;
+		/**
+		 * gets a character based on using for/each loop and checking using equals() operation.
+		 */
 	}
 	
 	public boolean updateCharacter(MiddleEarthCharacter character, String name, int health, int power) {
@@ -58,6 +68,10 @@ public class CharacterManager {
 			character.setPower(power);
 		}
 		return change;
+		
+		/**
+		 * checks if there is a change of each attribute and updates it individually.
+		 */
 	}
 	
 	public boolean deleteCharacter(MiddleEarthCharacter character) {
@@ -74,6 +88,9 @@ public class CharacterManager {
 			return true;
 		}
 		return false;
+		/**
+		 * finds index of character object, then removes it from the list by shifting each object index to one less.
+		 */
 	}
 	
 	public void displayAllCharacters() {
@@ -81,6 +98,10 @@ public class CharacterManager {
 			characters[i].displayInfo();
 			}
 			return;
+			
+			/**
+			 * uses a for loop to display each character object.
+			 */
 		}
 	
 	private int findIndex(MiddleEarthCharacter character) {
@@ -90,16 +111,18 @@ public class CharacterManager {
 			}
 		}
 		return -1;
+		
+		/**
+		 * uses a for and if loop to find the index of character passed.
+		 */
 	}
 	
-	// Add a getter method for size
-    public int getSize() {
-        return size;
-    }
-    
-    // Getter method for characters
-    public MiddleEarthCharacter[] getCharacters() {
-        return characters;
-    }
+<<<<<<< HEAD
+	
 
+=======
+	
+>>>>>>> 96578f53d08b81204dc7524354bae80e7b0f02cb
 }
+
+
